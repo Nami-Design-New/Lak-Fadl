@@ -29,7 +29,7 @@
   padding: 0;
   outline: none;
   scroll-behavior: smooth;
-  direction: ltr;
+  direction: rtl;
 }
 ::-webkit-scrollbar {
   width: 8px;
@@ -134,7 +134,7 @@ input {
 [type="number"],
 [type="tel"],
 [type="url"] {
-  direction: ltr;
+  direction: rtl;
 }
 .fancybox__track,
 .fancybox__content,
@@ -182,7 +182,7 @@ button {
   background-color: var(--darkColor);
   position: fixed;
   top: 0;
-  right: 0;
+  left: 0;
   z-index: 999999;
   width: 100%;
   height: 100%;
@@ -200,7 +200,7 @@ button {
     &::after {
       content: "";
       position: absolute;
-      right: 0;
+      left: 0;
       top: 0;
       width: 250px;
       height: 250px;
@@ -237,7 +237,7 @@ button {
     content: "";
     position: absolute;
     top: 0;
-    left: 0;
+    right: 0;
     width: 100%;
     height: 100%;
     z-index: 2;
@@ -247,8 +247,8 @@ button {
   }
   &.oppositeDir {
     &::after {
-      left: unset;
-      right: 0;
+      right: unset;
+      left: 0;
     }
   }
   .lazy {
@@ -258,11 +258,11 @@ button {
   }
   &.loaded {
     &::after {
-      transform: translateX(-100%);
+      transform: translateX(100%);
     }
     &.oppositeDir {
       &::after {
-        transform: translateX(100%);
+        transform: translateX(-100%);
       }
     }
     &.down {
@@ -296,12 +296,12 @@ content {
   width: 100%;
   height: 100%;
   background-repeat: repeat;
-  background-position: top right;
+  background-position: top left;
   background-image: url(../img/body-bg.png);
 }
 .socialMedia {
   display: flex;
-  margin-left: auto;
+  margin-right: auto;
   @media screen and (max-width: 576px) {
     margin: auto;
   }
@@ -370,7 +370,7 @@ content {
 
   .videoBG {
     position: absolute;
-    right: 0;
+    left: 0;
     top: 0;
     width: 100%;
     height: 100%;
@@ -381,7 +381,7 @@ content {
       width: 100%;
       height: 100%;
       position: absolute;
-      right: 0;
+      left: 0;
       top: 0;
       background-color: #000;
       opacity: 0.4;
@@ -528,29 +528,29 @@ content {
       border-radius: 50%;
       position: absolute;
       top: 0;
-      right: 50%;
-      transform: translateX(50%);
+      left: 50%;
+      transform: translateX(-50%);
       animation: scrollDown linear 2s infinite;
       transition: var(--transition);
     }
   }
   @keyframes scrollDown {
     0% {
-      transform: translate(50%, 0px);
+      transform: translate(-50%, 0px);
       opacity: 0;
     }
     50% {
-      transform: translate(50%, 16px);
+      transform: translate(-50%, 16px);
       opacity: 1;
     }
     100% {
-      transform: translate(50%, 32px);
+      transform: translate(-50%, 32px);
       opacity: 0;
     }
   }
 }
 .text_invert > div {
-  background-image: linear-gradient(to left, #ffffff 50%, #423c3c 50%);
+  background-image: linear-gradient(to right, #ffffff 50%, #423c3c 50%);
   background-size: 200% 100%;
   background-position-x: -100%;
   color: transparent;
