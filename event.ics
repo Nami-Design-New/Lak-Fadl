@@ -1,0 +1,13 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Extendad//Event//EN
+BEGIN:VEVENT
+DTSTAMP:20240218T120000Z
+UID:https://event.extendad.com/ar
+SUMMARY:حفل مجموعة إكستند
+DESCRIPTION:في قلب كل نجاح نحققه يمتد أثر كل من له فضل في رحلتنا وإنجازاتنا منذ تأسيسنا ومن قلب تأسيس المملكة العربية السعودية، الدرعية؛ نحتفي بمسيرة تسطر تاريخ صنع التغيير في الإعلام الرقمي السعودي.
+DTSTART;TZID=Asia/Riyadh:20240302T203000
+DTEND;TZID=Asia/Riyadh:20240302T220000
+LOCATION:مطل البجيري، الدرعية
+END:VEVENT
+END:VCALENDAR
